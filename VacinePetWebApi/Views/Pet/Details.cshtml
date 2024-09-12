@@ -1,0 +1,82 @@
+﻿@model VacinePetWebApi.Models.Pet
+
+@{
+    ViewBag.Title = "Visualizar";
+}
+
+<h2>Visualizar</h2>
+
+<div>
+    <h4>Pet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Especie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<style>
+    h2 {
+        color: #41b3e1;
+        font-weight: 500;
+        font-family: 'Baloo', sans-serif;
+        font-size: 55px;
+        margin-top: 30px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    th {
+        color: #f76501;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-weight: 700;
+        margin-top: -10px;
+        font-family: 'Baloo', sans-serif;
+        color: #f76501;
+        font-size: 35px;
+    }
+
+    .intro {
+        margin-top: 20px;
+    }
+</style>

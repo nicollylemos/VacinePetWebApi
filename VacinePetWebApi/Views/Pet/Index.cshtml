@@ -1,0 +1,82 @@
+﻿@model IEnumerable<VacinePetWebApi.Models.Pet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pets Cadastrados</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Pet", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Especie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Raca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Raca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idade)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Apagar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+<style>
+    h2 {
+        color: #41b3e1;
+        font-weight: 500;
+        font-family: 'Baloo', sans-serif;
+        font-size: 55px;
+        margin-top: 30px;
+    }
+
+    th {
+        color: #f76501;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-weight: 700;
+        margin-top: 10px;
+        font-family: 'Baloo', sans-serif;
+        color: #f76501;
+    }
+
+    .intro {
+        margin-top: 20px;
+    }
+
+    a {
+        color: #3886a5;
+        text-decoration: none;
+    }
+</style>
